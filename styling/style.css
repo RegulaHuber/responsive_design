@@ -1,24 +1,14 @@
+/* Immer nur margin-top: 0; und dann nach unten arbeiten */
+
 :root {
   --color-antrhrazit: #2B2E34;
   --color-neongelb: #F1FF27;
   --color-lavendel: #D8C8FF;
   --color-mint: #C7F5E9;
-}
-
-
-
-
-
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./assets/fonts/CustomFont.woff2') format('woff2'),
-       url('./assets/fonts/CustomFont.woff') format('woff');  
+  --color-white: #FFFFFF;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-
   background: linear-gradient(
     to bottom,
     var(--color-mint) 0%,  
@@ -30,27 +20,27 @@ body {
 }
 
 
-h1{
-  background-color: lightblue ;
+h1 {
+  font-family: 'Special Elite', sans-serif;
+  font-size: 1.5rem;
 }
 
-/* ================
+.lead-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5; /* Vertical spacing */
+}
 
-* Global Styles
-
-Immer nur margin-top: 0; und dann nach unten arbeiten
-
-
-================= */
 
 h2{
   font-size: 26px;
 }
 
 .button {
-  background-color: lightblue;
+  background-color: var(--color-white);
   border: none;
-  color: darkblue;
+  color: var(--color-antrhrazit);
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -60,5 +50,7 @@ h2{
   cursor: pointer;
   border-radius: 100px;
   line-height: 1.5; /* Vertical spacing */
-  font-weight: bold;
+  font-family: 'Manrope' sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
 }
