@@ -1,3 +1,14 @@
+:root {
+  --color-antrhrazit: #2B2E34;
+  --color-neongelb: #F1FF27;
+  --color-lavendel: #D8C8FF;
+  --color-mint: #C7F5E9;
+}
+
+
+
+
+
 @font-face {
   font-family: 'CustomFont';
   src: url('./assets/fonts/CustomFont.woff2') format('woff2'),
@@ -10,11 +21,11 @@ body {
 
   background: linear-gradient(
     to bottom,
-    #0f2027 0%,
-    #1c2e35 25%,
-    #43203e 50%,
-    #244a57 75%,
-    #5c642c 100%
+    var(--color-mint) 0%,  
+    var(--color-lavendel) 25%,
+    var(--color-antrhrazit) 50%,
+    var(--color-lavendel) 75%,
+    var(--color-mint) 100%
   );
 }
 
