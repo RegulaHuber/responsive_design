@@ -20,9 +20,21 @@ body {
 }
 
 
-h1 {
+.lead-title {
   font-family: 'Special Elite', sans-serif;
   font-size: 1.5rem;
+}
+
+.box-title {
+  font-family: 'Special Elite', sans-serif;
+  font-size: 1.25rem;
+} 
+
+.box-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5; /* Vertical spacing */
 }
 
 .lead-text {
@@ -32,9 +44,11 @@ h1 {
   line-height: 1.5; /* Vertical spacing */
 }
 
-
-h2{
-  font-size: 26px;
+.box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 60px;
+  padding: 40px;
+  margin:  0;
 }
 
 .button {
