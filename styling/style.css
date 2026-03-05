@@ -4,6 +4,21 @@
        url('./assets/fonts/CustomFont.woff') format('woff');  
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    to bottom,
+    #0f2027 0%,
+    #1c2e35 25%,
+    #43203e 50%,
+    #244a57 75%,
+    #5c642c 100%
+  );
+}
+
+
 h1{
   background-color: lightblue ;
 }
@@ -11,6 +26,9 @@ h1{
 /* ================
 
 * Global Styles
+
+Immer nur margin-top: 0; und dann nach unten arbeiten
+
 
 ================= */
 
