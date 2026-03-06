@@ -7,6 +7,7 @@
   --color-mint: #C7F5E9;
   --color-white: #FFFFFF;
   --color-antrhrazit-rgb: 43, 46, 52;
+  --abstand-klein: 8px;
 }
 
 body {
@@ -28,29 +29,54 @@ width: 100%;
 top:0;
 left: 0;
 right: 0;
-height: 140px;
+height: calc(6vw + 120px);
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.75) 0%,
     rgba(255, 255, 255, 0) 100% 
     );
-
 z-index: 10;
 }
 
 .logo {
   position: fixed;
-  top: 25px;
-  left: 25px;  
+  top: 6vw;
+  left: 6vw;  
 }
 
 .menu-icon {
   position: fixed;
-  top: 25px;
-  right: 25px; 
+  top: 6vw;
+  right: 6vw; 
   width: 45px;
   height: 45px;
 }
+
+/* MAIN */
+
+.main-content {
+  margin-top: calc(6vw + 120px); /* Höhe des Headers */
+  margin-right: 6vw;
+  margin-left: 6vw;
+}
+
+
+.lead-image {
+
+}
+
+
+
+.button-mit-pfeil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Abstand zwischen Text und Pfeil */ 
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 
 
 /* FONTS */
@@ -82,9 +108,9 @@ z-index: 10;
 .box {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 60px;
-  padding: 40px;
-  margin:  0;
-}
+  padding: 25px;
+  margin-bottom: 30px;
+} 
 
 .darkbox {
   background-color: var(--color-antrhrazit); 
@@ -107,6 +133,7 @@ z-index: 10;
   font-family: 'Manrope' sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  max-width: 240px;
 }
 
 
@@ -175,4 +202,12 @@ z-index: 10;
   font-weight: 400;
   font-size: 0.875rem;
   text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  .lead-title {
+
+  }
 }
