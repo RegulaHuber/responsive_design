@@ -15,8 +15,6 @@
 }
 
 
-
-
 body {
   background: linear-gradient(
     to bottom,
@@ -215,7 +213,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  max-width: 1100px;
 }
 
 .footer-title {
@@ -225,6 +222,7 @@ button {
   font-size: 1.75rem;
   text-transform: uppercase;
   margin: 0;
+  margin-top: 60px;
 }
 
 .footer-columns {
@@ -266,6 +264,7 @@ button {
   justify-content: space-between;
   gap: 12px;
   font-size: 0.95rem;
+  margin-bottom: 60px;
 }
 
 .footer-meta-right {
@@ -292,6 +291,12 @@ button {
 .image img {
   width: 350px;
   height: auto;
+}
+
+
+/* Swiper-Styling */ 
+.swiper {
+  height: 300px;
 }
 
 
