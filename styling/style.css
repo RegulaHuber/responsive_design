@@ -119,6 +119,7 @@ z-index: 10;
   max-width: 600px;
   margin: 0 auto; /* Zentriert die Box horizontal */
   margin-bottom: 30px;
+  scroll-margin-top: 100px;
 
 } 
 
@@ -310,7 +311,7 @@ button {
 
 /* Swiper-Styling */ 
 .swiper {
-  height: 500px;
+  height: 450px;
   position: relative;
 }
 

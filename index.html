@@ -72,7 +72,7 @@
         />
         </div>
 
-        <div class="box whitebox allgemeines_erste_box">
+        <div class="box whitebox allgemeines_erste_box" id="allgemeines_erste_box">
           <h2 class="box-title">
             Was macht dein Geld eigentlich auf der Bank?
           </h2>
@@ -112,7 +112,7 @@
       </div>
       
 
-      <div class="box darkbox konkurs_box">
+      <div class="box darkbox konkurs_box" id="konkurs_box">
         <h2 class="box-title">Und wenn die Bank pleite geht?</h2>
         <p class="box-text">
           In der Schweiz schützt die Einlagensicherung deine Guthaben über
@@ -130,7 +130,7 @@
       />
       </div>
 
-      <div class="box darkbox todesfall_box">
+      <div class="box darkbox todesfall_box" id="todesfall_box">
         <h2 class="box-title">Was passiert im Todesfall?</h2>
         <p class="box-text">
           Das Guthaben wird Teil des Nachlasses. Konten werden gesperrt, bis die
@@ -146,7 +146,7 @@
       />
       </div>
 
-      <div class="box whitebox bankgeheimnis_box">
+      <div class="box whitebox bankgeheimnis_box" id="bankgeheimnis_box">
         <h2 class="box-title">Was hat es mit dem Bankgeheimnis auf sich?</h2>
         <p class="box-text">
           Deine Bank darf Informationen über dein Konto nicht einfach
@@ -171,7 +171,7 @@
       />
       </div>
 
-      <div class="box whitebox empfehlung_box">
+      <div class="box whitebox empfehlung_box" id="empfehlung_box">
         <h2 class="box-title">Welches Konto empfiehlst du mir?</h2>
         <p class="box-text">
           Das Angebot an Bankkonten ist riesig. In diesem Dschungel den
@@ -214,7 +214,7 @@
         <button id="find-account-button" class="button">Konto finden</button>
       </div>
 
-      <div class="box whitebox ranking_box">
+      <div class="box whitebox ranking_box" id="ranking_box">
         <h2 class="box-title">Welches sind generell die besten Banken?</h2>
         <p class="box-text">
           Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben für
@@ -268,7 +268,7 @@
 
 
     </div>
-    ...
+    
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
@@ -302,16 +302,16 @@
           <div class="footer-columns">
             <div class="footer-column">
               <p class="footer-column-title">Gewusst</p>
-              <a href="#">Allgemeines</a>
-              <a href="#">Konkurs</a>
-              <a href="#">Todesfall</a>
-              <a href="#">Bankgeheimnis</a>
+              <a href="#allgemeines_erste_box">Allgemeines</a>
+              <a href="#konkurs_box">Konkurs</a>
+              <a href="#todesfall_box">Todesfall</a>
+              <a href="#bankgeheimnis_box">Bankgeheimnis</a>
             </div>
 
             <div class="footer-column">
               <p class="footer-column-title">Banken</p>
-              <a href="#">Empfehlung</a>
-              <a href="#">Top 3 – Ranking</a>
+              <a href="#empfehlung_box">Empfehlung</a>
+              <a href="#ranking_box">Top 3 – Ranking</a>
             </div>
           </div>
 
