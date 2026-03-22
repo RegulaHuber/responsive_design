@@ -181,24 +181,24 @@
         </p>
 
         <div class="tags">
-          <input type="checkbox" id="student" />
+          <input type="checkbox" id="student" onclick='console.log(document.getElementById("find-account-button").textContent = "student")'/>
           <label for="student" class="labels">🎓 Student</label>
 
-          <input type="checkbox" id="vielreisender" />
+          <input type="checkbox" id="vielreisender" onclick='console.log(document.getElementById("find-account-button").textContent = "vielreisender")'/>
           <label for="vielreisender" class="labels">✈️ Vielreisender</label>
 
-          <input type="checkbox" id="sparer" />
+          <input type="checkbox" id="sparer" onclick='console.log(document.getElementById("find-account-button").textContent = "sparer")'/>
           <label for="sparer" class="labels">💰 Sparer</label>
 
-          <input type="checkbox" id="selbststaendiger" />
+          <input type="checkbox" id="selbststaendiger" onclick='console.log(document.getElementById("find-account-button").textContent = "selbststaendiger")'/>
           <label for="selbststaendiger" class="labels">💼 Selbständiger</label>
 
-          <input type="checkbox" id="unternehmensgruender" />
+          <input type="checkbox" id="unternehmensgruender" onclick='console.log(document.getElementById("find-account-button").textContent = "unternehmensgruender")'/>
           <label for="unternehmensgruender" class="labels"
             >🚀 Unternehmensgründer</label
           >
 
-          <input type="checkbox" id="familienkonto" />
+          <input type="checkbox" id="familienkonto" onclick='console.log(document.getElementById("find-account-button").textContent = "familienkonto")'/>
           <label for="familienkonto" class="labels">👨‍👩‍👧 Familienkonto</label>
 
           <input type="checkbox" id="anleger" />
@@ -211,7 +211,7 @@
           <label for="grenzgaenger" class="labels">🌐 Grenzgänger</label>
         </div>
 
-        <button class="button">Konto finden</button>
+        <button id="find-account-button" class="button">Konto finden</button>
       </div>
 
       <div class="box whitebox ranking_box">
@@ -221,53 +221,62 @@
           dich recherchiert und stellen dir hier die drei besten Banken für 2026
           vor.
         </p>
-        <img
-          src="./assets/icons/arrow_left.svg"
-          alt="Pfeil nach links"
-          width="40"
-        />
-        <img
-          src="./assets/logos/Migros_Bank.svg"
-          alt="Logo Migros Bank"
-          width="150"
-        />
-        <img
-          src="./assets/icons/arrow_right.svg"
-          alt="Pfeil nach rechts"
-          width="40"
-        />
-        <p class="box-text">
-          Migros Bank<br /><br />
-          Faire Konditionen<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
-          Persönliche Beratung<br />🔵 🔵 🔵 🔵 🔵<br /><br />
-          Etablierte Bankengruppe<br />🔵 🔵 🔵 🔵 🔵
-        </p>
-
+ 
+<div class="swiper-button-prev"></div>
 <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    <div class="swiper-slide">    <p class="box-text">
-          Migros Bank<br /><br />
+    <div class="swiper-slide">    
+         <img
+          src="./assets/logos/Migros_Bank.svg"
+          alt="Logo Migros Bank"
+          width="140"
+        />
+      <p class="box-text abstand-klein">
+          <strong>Migros Bank</strong><br /><br />
           Faire Konditionen<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
           Persönliche Beratung<br />🔵 🔵 🔵 🔵 🔵<br /><br />
           Etablierte Bankengruppe<br />🔵 🔵 🔵 🔵 🔵
         </p></div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">
+          <img
+            src="./assets/logos/Neon.svg"
+            alt="Logo Neon Bank"
+            width="140"
+          />          
+            <p class="box-text abstand-klein">
+      <strong>Neon</strong><br /><br />
+          Moderne Bank<br />🔵 🔵 🔵 🔵 🔵<br /><br />
+          Attraktive Wechselkurse<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
+          Einfache App-Bedienung<br />🔵 🔵 🔵 🔵 🔵
+        </p></div>
+    <div class="swiper-slide">
+        <img
+          src="./assets/logos/Post_Finance.svg"
+          alt="Logo Post Finance"
+          width="250"
+        />
+         <p class="box-text abstand-klein">
+      <strong>Post Finance</strong><br /><br />
+          Landesweite Präsenz<br />🔵 🔵 🔵 🔵 🔵<br /><br />
+          Hohe Stabilität<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
+          Digitale Lösungen<br />🔵 🔵 🔵 ⚪ ⚪
+        </p>
+
+
+
+    </div>
     ...
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
+<div class="swiper-button-next"></div>
 
 
 

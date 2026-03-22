@@ -7,13 +7,20 @@
   --color-mint: #C7F5E9;
   --color-white: #FFFFFF;
   --color-antrhrazit-rgb: 43, 46, 52;
-  --abstand-klein: 8px;
+  --abstand-klein: 20px;
+  --swiper-theme-color: transparent !important;
 }
 
 * {
   box-sizing: border-box;
 }
 
+
+
+
+.abstand-klein {
+  padding-top: var(--abstand-klein);
+}
 
 body {
   background: linear-gradient(
@@ -303,10 +310,58 @@ button {
 
 /* Swiper-Styling */ 
 .swiper {
-  height: 180px;
+  height: 500px;
+  position: relative;
+}
+
+.ranking_box {
+  position: relative;
+}
+
+.swiper-button-prev {
+  background-image: url('../assets/icons/arrow_left.svg');
+  color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.swiper-button-prev::before {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url('../assets/icons/arrow_right.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-button-next::before {
+  display: none;
+}
+
+.swiper-slide {
+  padding: 40px 55px;
 }
 
 /* RESPONSIVE */
+
+.swiper-pagination,
+.swiper-scrollbar {
+  display: none !important;
+}
 
 @media (min-width: 768px) {
 
