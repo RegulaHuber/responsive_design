@@ -174,7 +174,7 @@
         <div class="button-mit-pfeil" id="banken"> 
           <a href="#empfehlung_box">
             <button class="button">
-              Entdecke die besten Ba ken für dein Guthaben
+              Entdecke die besten Banken für dein Guthaben
             </button>
             <img
               class="centered-arrow"
@@ -287,8 +287,35 @@
             <input type="checkbox" id="grenzgaenger" />
             <label for="grenzgaenger" class="labels">🌐 Grenzgänger</label>
           </div>
+                  <!--    <button id="find-account-button" class="button">Konto finden</button>-->
 
-          <button id="find-account-button" class="button">Konto finden</button>
+
+<button class="button" onclick="zeigeText()">Konto finden</button>
+
+<p class="box-text abstand-klein box-maximal-breit" id="output"></p>
+
+<script>
+  const texte = [
+    "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
+    "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet. ✈️💰",
+    "Wir empfehlen dir das One-Lock-Konto. Ist das Geld Mal drauf, kann es nicht mehr weg. 🏋️‍♂️💰"
+  ];
+
+  let index = 0;
+
+  function zeigeText() {
+    document.getElementById("output").innerText = texte[index];
+    index++;
+
+    if (index >= texte.length) {
+      index = 0; // wieder von vorne starten (optional)
+    }
+  }
+</script>
+
+
+
+
         </div>
 
         <div class="box whitebox ranking_box last-card" id="ranking_box">
