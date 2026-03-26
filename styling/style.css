@@ -69,12 +69,16 @@ header {
   transition: all 0.3s ease;
 }
 
+.box-maximal-breit {
+  max-width: 650px;
+}
+
 .first-card {
   padding-top: 150px;
 }
 
 .last-card {
-  margin: 150px;
+  padding-bottom: 150px;
 }
 
 .card-image-top {
