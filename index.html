@@ -17,6 +17,7 @@
     <!-- HEADER -->
     <header>
       <div class="header-content main-content">
+
         <img
           class="logo"
           src="./assets/logos/Bankguthaben_Logo.svg"
@@ -35,7 +36,7 @@
 
     <!-- MAIN -->
     <main>
-      <div class="main-content">
+      <div class="main-content" id="very-top">
         <div class="cards-top-or-side first-card">
           <img
             src="./assets/images/Piggy.webp"
@@ -66,7 +67,7 @@
             />
           </a>
         </div>
-        <div class="cards-top-or-side">
+        <div class="cards-top-or-side" id="allgemeines_erste_box">
           <div class="card-image-top">
             <img
               src="./assets/images/Bank.webp"
@@ -74,7 +75,7 @@
               alt="3D-Grafik einer Bank"
             />
 
-            <div class="box whitebox">
+            <div class="box whitebox" >
               <h2 class="box-title">
                 Was macht dein Geld eigentlich auf der Bank?
               </h2>
@@ -169,10 +170,10 @@
           </div>
         </div>
 
-        <div class="button-mit-pfeil">
+        <div class="button-mit-pfeil" id="banken"> 
           <a href="#empfehlung_box">
             <button class="button">
-              Entdecke die besten Banken für dein Guthaben
+              Entdecke die besten Ba ken für dein Guthaben
             </button>
             <img
               class="centered-arrow"
@@ -269,7 +270,14 @@
             />
             <label for="familienkonto" class="labels">👨‍👩‍👧 Familienkonto</label>
 
-            <input type="checkbox" id="anleger" />
+            <input          type="checkbox"
+              id="anleger"
+              onclick="
+                console.log(
+                  (document.getElementById('find-account-button').textContent =
+                    'Als Anleger solltest du...'),
+                )
+              "/>
             <label for="anleger" class="labels">📈 Anleger</label>
 
             <input type="checkbox" id="superreich" />
@@ -282,7 +290,7 @@
           <button id="find-account-button" class="button">Konto finden</button>
         </div>
 
-        <div class="box whitebox ranking_box" id="ranking_box">
+        <div class="box whitebox ranking_box last_card" id="ranking_box">
           <h2 class="box-title">Welches sind generell die besten Banken?</h2>
           <p class="box-text">
             Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben
@@ -350,27 +358,27 @@
     <footer id="footer">
       <div class="footer-box">
         <div class="footer-content footer main-content">
-          <p class="footer-title">Bankguthaben</p>
+          <a href="#very-top" class="hover_neon"><p class="footer-title">Bankguthaben</p></a>
 
           <div class="footer-columns">
             <div class="footer-column">
-              <p class="footer-column-title">Gewusst</p>
-              <a href="#allgemeines_erste_box">Allgemeines</a>
-              <a href="#konkurs_box">Konkurs</a>
-              <a href="#todesfall_box">Todesfall</a>
-              <a href="#bankgeheimnis_box">Bankgeheimnis</a>
+              <a href="#allgemeines_erste_box" class="hover_neon"><p class="footer-column-title">Gewusst</p></a>
+              <a href="#allgemeines_erste_box" class="hover_neon">Allgemeines</a>
+              <a href="#konkurs_box" class="hover_neon">Konkurs</a>
+              <a href="#todesfall_box" class="hover_neon">Todesfall</a>
+              <a href="#bankgeheimnis_box" class="hover_neon">Bankgeheimnis</a>
             </div>
 
             <div class="footer-column">
-              <p class="footer-column-title">Banken</p>
-              <a href="#empfehlung_box">Empfehlung</a>
-              <a href="#ranking_box">Top 3 – Ranking</a>
+              <a href="#banken" class="hover_neon"><p class="footer-column-title">Banken</p></a>
+              <a href="#empfehlung_box" class="hover_neon">Empfehlung</a>
+              <a href="#ranking_box" class="hover_neon">Top 3 – Ranking</a>
             </div>
           </div>
 
           <div class="footer-meta">
             <p class="footer-meta-left">
-              <a href="#">Impressum</a>&ensp;|&ensp;<a href="#">Datenschutz</a>&ensp;|&ensp;© 2026
+              <a href="#impressum" class="hover_neon">Impressum</a>&ensp;|&ensp;<a href="#datenschutz" class="hover_neon">Datenschutz</a>&ensp;|&ensp;© 2026
             </p>
           </div>
         </div>

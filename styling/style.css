@@ -73,6 +73,10 @@ header {
   padding-top: 150px;
 }
 
+.last-card {
+  margin: 150px;
+}
+
 .card-image-top {
   display: flex;
   flex-direction: column;
@@ -199,6 +203,12 @@ header {
   color: var(--color-white);
 }
 
+.hover_neon:hover {
+  color: var(--color-neongelb);
+  transition: color 0.3s;
+
+} 
+
 button {
   background-color: var(--color-white);
   border: none;
@@ -239,6 +249,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 /* Checkbox komplett verstecken */
