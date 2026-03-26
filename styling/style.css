@@ -69,6 +69,10 @@ header {
   transition: all 0.3s ease;
 }
 
+.first-card {
+  padding-top: 150px;
+}
+
 .card-image-top {
   display: flex;
   flex-direction: column;
