@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bankguthaben | einfach erklärt</title>
     <link rel="stylesheet" href="./styling/style.css" />
-    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -18,19 +18,19 @@
     <!-- HEADER -->
     <header>
       <div class="header-content main-content">
-
-        <img
-          class="logo"
-          src="./assets/logos/Bankguthaben_Logo.svg"
-          alt="Logo: Bankguthaben | einfach erklärt"
-        />
+        <a href="#very-top">
+          <img
+            class="logo"
+            src="./assets/logos/Bankguthaben_Logo.svg"
+            alt="Logo: Bankguthaben | einfach erklärt"
+        /></a>
 
         <a href="#footer">
-        <img
-          class="menu-icon"
-          src="assets/icons/Piggy_Icon.svg"
-          alt="Menü öffnen"
-        />
+          <img
+            class="menu-icon"
+            src="assets/icons/Piggy_Icon.svg"
+            alt="Menü öffnen"
+          />
         </a>
       </div>
     </header>
@@ -76,7 +76,7 @@
               alt="3D-Grafik einer Bank"
             />
 
-            <div class="box whitebox" >
+            <div class="box whitebox">
               <h2 class="box-title">
                 Was macht dein Geld eigentlich auf der Bank?
               </h2>
@@ -171,7 +171,7 @@
           </div>
         </div>
 
-        <div class="button-mit-pfeil" id="banken"> 
+        <div class="button-mit-pfeil" id="banken">
           <a href="#empfehlung_box">
             <button class="button">
               Entdecke die besten Banken für dein Guthaben
@@ -271,14 +271,16 @@
             />
             <label for="familienkonto" class="labels">👨‍👩‍👧 Familienkonto</label>
 
-            <input          type="checkbox"
+            <input
+              type="checkbox"
               id="anleger"
               onclick="
                 console.log(
                   (document.getElementById('find-account-button').textContent =
                     'Als Anleger solltest du...'),
                 )
-              "/>
+              "
+            />
             <label for="anleger" class="labels">📈 Anleger</label>
 
             <input type="checkbox" id="superreich" />
@@ -287,38 +289,35 @@
             <input type="checkbox" id="grenzgaenger" />
             <label for="grenzgaenger" class="labels">🌐 Grenzgänger</label>
           </div>
-                  <!--    <button id="find-account-button" class="button">Konto finden</button>-->
+          <!--    <button id="find-account-button" class="button">Konto finden</button>-->
 
+          <button class="button" onclick="zeigeText()">Konto finden</button>
 
-<button class="button" onclick="zeigeText()">Konto finden</button>
+          <strong><p class="box-text abstand-klein box-maximal-breit" id="output"></p></strong>
 
-<p class="box-text abstand-klein box-maximal-breit" id="output"></p>
+          <script>
+            const texte = [
+              "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
+              "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet für den nächsten Urlaub. 🌴",
+              "Schon vom Jackpot-Festgeldkonto der Valiant gehört? Du kannst jedes Jahr einen Jackpot gewinnen, der dopplet so viel beträgt wie dein Guthaben, wenn du dein Geld dort lässt. 🎉",
+            ];
 
-<script>
-  const texte = [
-    "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
-    "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet. ✈️💰",
-    "Wir empfehlen dir das One-Lock-Konto. Ist das Geld Mal drauf, kann es nicht mehr weg. 🏋️‍♂️💰"
-  ];
+            let index = 0;
 
-  let index = 0;
+            function zeigeText() {
+              document.getElementById("output").innerText = texte[index];
+              index++;
 
-  function zeigeText() {
-    document.getElementById("output").innerText = texte[index];
-    index++;
-
-    if (index >= texte.length) {
-      index = 0; // wieder von vorne starten (optional)
-    }
-  }
-</script>
-
-
-
-
+              if (index >= texte.length) {
+                index = 0; // wieder von vorne starten (optional)
+              }
+            }
+          </script>
         </div>
 
-        <div class="box whitebox ranking_box last-card" id="ranking_box">
+        <div class="button-mit-pfeil"></div>
+
+        <div class="box whitebox ranking_box last-card id="ranking_box">
           <h2 class="box-title">Welches sind generell die besten Banken?</h2>
           <p class="box-text box-maximal-breit">
             Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben
@@ -381,24 +380,35 @@
           <div class="swiper-button-next"></div>
         </div>
       </div>
+
+      <div class="button-mit-pfeil"></div>
+
     </main>
     <!-- FOOTER -->
     <footer id="footer">
       <div class="footer-box">
         <div class="footer-content footer main-content">
-          <a href="#very-top" class="hover_neon"><p class="footer-title">Bankguthaben</p></a>
+          <a href="#very-top" class="hover_neon"
+            ><p class="footer-title">Bankguthaben</p></a
+          >
 
           <div class="footer-columns">
             <div class="footer-column">
-              <a href="#allgemeines_erste_box" class="hover_neon"><p class="footer-column-title">Gewusst</p></a>
-              <a href="#allgemeines_erste_box" class="hover_neon">Allgemeines</a>
+              <a href="#allgemeines_erste_box" class="hover_neon"
+                ><p class="footer-column-title">Gewusst</p></a
+              >
+              <a href="#allgemeines_erste_box" class="hover_neon"
+                >Allgemeines</a
+              >
               <a href="#konkurs_box" class="hover_neon">Konkurs</a>
               <a href="#todesfall_box" class="hover_neon">Todesfall</a>
               <a href="#bankgeheimnis_box" class="hover_neon">Bankgeheimnis</a>
             </div>
 
             <div class="footer-column">
-              <a href="#banken" class="hover_neon"><p class="footer-column-title">Banken</p></a>
+              <a href="#banken" class="hover_neon"
+                ><p class="footer-column-title">Banken</p></a
+              >
               <a href="#empfehlung_box" class="hover_neon">Empfehlung</a>
               <a href="#ranking_box" class="hover_neon">Top 3 – Ranking</a>
             </div>
@@ -406,7 +416,10 @@
 
           <div class="footer-meta">
             <p class="footer-meta-left">
-              <a href="#impressum" class="hover_neon">Impressum</a>&ensp;|&ensp;<a href="#datenschutz" class="hover_neon">Datenschutz</a>&ensp;|&ensp;© 2026
+              <a href="#impressum" class="hover_neon">Impressum</a
+              >&ensp;|&ensp;<a href="#datenschutz" class="hover_neon"
+                >Datenschutz</a
+              >&ensp;|&ensp;© 2026
             </p>
           </div>
         </div>
