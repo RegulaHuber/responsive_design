@@ -14,7 +14,7 @@ html {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Verhindert, dass Padding und Border die Gesamtgröße eines Elements beeinflussen */
 }
 
 .abstand-klein {
@@ -35,7 +35,7 @@ body {
 
 header {
   position: fixed;
-  height: calc(6vw + 120px);
+  height: calc(6vw + 100px);
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.75) 0%,
@@ -55,8 +55,15 @@ header {
 }
 
 .menu-icon {
-  width: 45px;
-  height: 45px;
+  width: 3.5vw;
+  min-width: 45px;
+  max-width: 60px;
+}
+
+.logo {
+  width: 20vw;
+  min-width: 250px;
+  max-width: 350px;
 }
 
 /* MAIN */
@@ -73,10 +80,6 @@ header {
 
 .first-card {
   padding-top: 150px;
-}
-
-.last-card {
-  padding-bottom: 150px;
 }
 
 .card-image-top {
@@ -102,6 +105,7 @@ header {
 
 .lead-image {
   order: 1;
+  margin-left: 30px;
 }
 
 .tombstone {
@@ -111,7 +115,7 @@ header {
 /* RESPONSIVE */
 
 @media (max-width: 1000px) {
- .main-content {
+  .main-content {
     margin: 0 2rem;
   }
 
@@ -125,16 +129,28 @@ header {
     flex-direction: column;
   }
 
-  .lead-image  {
+  .lead-image {
     order: -1;
   }
 
-  .tombstone {
-    transform: translateY(max(70px, 12vw));
+  .bank {
+    transform: translateY(
+      max(50px, 8vw)
+    ); /* erster Wert: 60px, damit es nicht zu viel wird, zweiter Wert: 9vw, damit es auf kleineren Bildschirmen genug Abstand hat */
+  }
+
+  .gerichtshammer {
+    transform: translateY(max(60px, 9vw));
+  }
+
+  .grabstein {
+    transform: translateY(max(70px, 10vw));
+  }
+
+  .tresor {
+    transform: translateY(max(70px, 10vw));
   }
 }
-
-/* BUTTON MIT PFEIL */ 
 
 .button-mit-pfeil {
   display: flex;
@@ -196,14 +212,9 @@ header {
 }
 
 .content-image {
-  max-width: 100%;
-  min-width: 180px;
-  width: 60svw;
-}
-
-.image {
-  width: 350px;
-  margin: 0 auto; /* Zentriert die Box horizontal */
+  max-width: 70%;
+  min-width: 220px;
+  width: 65svw;
 }
 
 .darkbox {
@@ -214,8 +225,7 @@ header {
 .hover_neon:hover {
   color: var(--color-neongelb);
   transition: color 0.3s;
-
-} 
+}
 
 button {
   background-color: var(--color-white);
@@ -245,7 +255,6 @@ button:hover {
 button {
   transition: 0.3s;
 }
-
 
 /* Checkbox verstecken */
 .tag-container input {
@@ -371,27 +380,10 @@ option {
   margin-bottom: 60px;
 }
 
-.footer-meta-right {
-  margin: 0;
-}
-
-@media (max-width: 640px) {
-  .footer-columns {
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-
-.erstefooterspalte,
-.zweitefooterspalte {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
 
 /* Swiper-Styling */
 .swiper {
-  height: 450px;
+  height: 430px;
   position: relative;
 }
 
@@ -406,10 +398,8 @@ option {
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
-  height: 40px;
   position: absolute;
   left: -70px;
-  top: 50%;
   transform: translate(50%, -50%);
 }
 
@@ -423,9 +413,7 @@ option {
   background-repeat: no-repeat;
   background-position: center;
   width: 40px;
-  height: 40px;
   position: absolute;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -434,10 +422,10 @@ option {
 }
 
 .swiper-slide {
-  padding: 40px 55px;
+  padding: 40px 60px; /* Abstand oben und unten */
 }
 
-/* RESPONSIVE */
+/* Versteckt die Pagination und Scrollbar, da sie nicht benötigt werden */
 
 .swiper-pagination,
 .swiper-scrollbar {

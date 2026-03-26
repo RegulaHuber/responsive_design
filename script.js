@@ -15,8 +15,8 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints:{
-                640: { slidesPerView: 2},
-                920: { slidesPerView: 3},
+                770: { slidesPerView: 2},
+                1200: { slidesPerView: 3},
               },
 
   // And if we need scrollbar

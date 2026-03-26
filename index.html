@@ -72,11 +72,11 @@
           <div class="card-image-top">
             <img
               src="./assets/images/Bank.webp"
-              class="content-image"
+              class="content-image bank"
               alt="3D-Grafik einer Bank"
             />
 
-            <div class="box whitebox">
+            <div class="box">
               <h2 class="box-title">
                 Was macht dein Geld eigentlich auf der Bank?
               </h2>
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <div class="box whitebox allgemeines_zweite_box">
+          <div class="box allgemeines_zweite_box">
             <h2 class="box-title">Was ist Bankguthaben überhaupt?</h2>
             <p class="box-text">
               Bankguthaben ist das Geld, das du auf deinem Konto hast.
@@ -114,7 +114,7 @@
         <div class="cards-top-or-side">
           <div class="card-image-top">
             <img
-              class="content-image"
+              class="content-image gerichtshammer"
               src="./assets/images/gerichtshammer.webp"
               alt="3D-Grafik eines Gerichtshammers"
             />
@@ -132,7 +132,7 @@
 
           <div class="card-image-top">
             <img
-              class="content-image tombstone"
+              class="content-image grabstein"
               src="./assets/images/grabstein.webp"
               alt="3D-Grafik eines Grabsteins"
             />
@@ -149,12 +149,15 @@
 
         <div class="card-image-top-or-side">
           <img
-            class="content-image"
+            class="content-image tresor"
             src="./assets/images/tresor.webp"
             alt="3D-Grafik eines Tresors"
           />
 
-          <div class="box whitebox bankgeheimnis_box" id="bankgeheimnis_box">
+          <div
+            class="box bankgeheimnis_box box-maximal-breit"
+            id="bankgeheimnis_box"
+          >
             <h2 class="box-title">
               Was hat es mit dem Bankgeheimnis auf sich?
             </h2>
@@ -185,7 +188,7 @@
           </a>
         </div>
 
-        <div class="box whitebox" id="empfehlung_box">
+        <div class="box" id="empfehlung_box">
           <h2 class="box-title">Welches Konto empfiehlst du mir?</h2>
           <p class="box-text box-maximal-breit">
             Das Angebot an Bankkonten ist riesig. In diesem Dschungel den
@@ -293,13 +296,16 @@
 
           <button class="button" onclick="zeigeText()">Konto finden</button>
 
-          <strong><p class="box-text abstand-klein box-maximal-breit" id="output"></p></strong>
+          <strong
+            ><p class="box-text abstand-klein box-maximal-breit" id="output"></p
+          ></strong>
 
           <script>
             const texte = [
               "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
-              "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet für den nächsten Urlaub. 🌴",
-              "Schon vom Jackpot-Festgeldkonto der Valiant gehört? Du kannst jedes Jahr einen Jackpot gewinnen, der dopplet so viel beträgt wie dein Guthaben, wenn du dein Geld dort lässt. 🎉",
+              "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. 💸 Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet für den nächsten Urlaub. 🌴",
+              "Schon vom Jackpot-Festgeldkonto der Valiant gehört? 🤩 Du kannst jedes Jahr einen Jackpot gewinnen, wenn du dein Geld dort lässt. 🎉",
+              "Seltsame Bedürfnisse! 🤔 Wir empfehlen dir auf ein Bankkonto zu verzichten und das Geld unter der Matratze zu lagern. Das ist nicht so sicher, dafür kannst du jederzeit darauf zugreifen. 🛏️",
             ];
 
             let index = 0;
@@ -317,7 +323,7 @@
 
         <div class="button-mit-pfeil"></div>
 
-        <div class="box whitebox ranking_box last-card id="ranking_box">
+        <div class="box ranking_box abstand-klein" id="ranking_box">
           <h2 class="box-title">Welches sind generell die besten Banken?</h2>
           <p class="box-text box-maximal-breit">
             Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben
@@ -361,7 +367,7 @@
                 <img
                   src="./assets/logos/Post_Finance.svg"
                   alt="Logo Post Finance"
-                  width="165"
+                  width="175"
                 />
                 <p class="box-text abstand-klein">
                   <strong>Post Finance</strong><br /><br />
@@ -382,7 +388,6 @@
       </div>
 
       <div class="button-mit-pfeil"></div>
-
     </main>
     <!-- FOOTER -->
     <footer id="footer">
