@@ -41,7 +41,7 @@
         <div class="cards-top-or-side first-card">
           <img
             src="./assets/images/Piggy.webp"
-            class="lead-image"
+            class="lead-image slide-in-image hover-zoom"
             alt="3D-Grafik von Piggy, dem Sparschwein"
           />
           <div class="lead-box">
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="button-mit-pfeil">
+        <div class="button-mit-pfeil erster-button">
           <a href="#allgemeines_erste_box">
             <button class="button">Starte deine Reise mit Piggy jetzt</button
             ><br />
@@ -68,11 +68,11 @@
             />
           </a>
         </div>
-        <div class="cards-top-or-side" id="allgemeines_erste_box">
+        <div class="cards-top-or-side allgemeines_erste_box" id="allgemeines_erste_box">
           <div class="card-image-top">
             <img
               src="./assets/images/Bank.webp"
-              class="content-image bank"
+              class="content-image bank hover-zoom"
               alt="3D-Grafik einer Bank"
             />
 
@@ -104,17 +104,17 @@
               <br /><br />
               <strong>Das bedeutet:</strong><br />
               Die Bank schuldet dir diesen Betrag. Du kannst ihn jederzeit (je
-              nach Kontoart) wieder zurückverlangenUnd die Bank darf mit dem
+              nach Kontoart) wieder zurückverlangen. Und die Bank darf mit dem
               Geld arbeiten, z. B. Kredite vergeben um so Einnahmen zu
               generieren.
             </p>
           </div>
         </div>
 
-        <div class="cards-top-or-side">
+        <div class="cards-top-or-side gerichtshammer-box">
           <div class="card-image-top">
             <img
-              class="content-image gerichtshammer"
+              class="content-image gerichtshammer hover-zoom"
               src="./assets/images/gerichtshammer.webp"
               alt="3D-Grafik eines Gerichtshammers"
             />
@@ -130,9 +130,9 @@
             </div>
           </div>
 
-          <div class="card-image-top">
+          <div class="card-image-top grabstein-box">
             <img
-              class="content-image grabstein"
+              class="content-image grabstein hover-zoom"
               src="./assets/images/grabstein.webp"
               alt="3D-Grafik eines Grabsteins"
             />
@@ -147,9 +147,9 @@
           </div>
         </div>
 
-        <div class="card-image-top-or-side">
+        <div class="card-image-top-or-side tresor-box">
           <img
-            class="content-image tresor"
+            class="content-image tresor hover-zoom"
             src="./assets/images/tresor.webp"
             alt="3D-Grafik eines Tresors"
           />
@@ -174,220 +174,232 @@
           </div>
         </div>
 
-        <div class="button-mit-pfeil" id="banken">
-          <a href="#empfehlung_box">
-            <button class="button">
-              Entdecke die besten Banken für dein Guthaben
-            </button>
-            <img
-              class="centered-arrow"
-              src="./assets/icons/arrow_down.svg"
-              alt="Pfeil nach unten"
-              width="20"
-            />
-          </a>
-        </div>
-
-        <div class="box" id="empfehlung_box">
-          <h2 class="box-title">Welches Konto empfiehlst du mir?</h2>
-          <p class="box-text box-maximal-breit">
-            Das Angebot an Bankkonten ist riesig. In diesem Dschungel den
-            Überblick zu behalten, ist nicht ganz einfach und hängt von deinen
-            Bedürfnissen ab. Wähle alle Begriffe, die auf dich zutreffen und wir
-            zeigen dir die besten Optionen.
-          </p>
-
-          <div class="tags">
-            <input
-              type="checkbox"
-              id="student"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'student'),
-                )
-              "
-            />
-            <label for="student" class="labels">🎓 Student</label>
-
-            <input
-              type="checkbox"
-              id="vielreisender"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'vielreisender'),
-                )
-              "
-            />
-            <label for="vielreisender" class="labels">✈️ Vielreisender</label>
-
-            <input
-              type="checkbox"
-              id="sparer"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'sparer'),
-                )
-              "
-            />
-            <label for="sparer" class="labels">💰 Sparer</label>
-
-            <input
-              type="checkbox"
-              id="selbststaendiger"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'selbststaendiger'),
-                )
-              "
-            />
-            <label for="selbststaendiger" class="labels"
-              >💼 Selbständiger</label
-            >
-
-            <input
-              type="checkbox"
-              id="unternehmensgruender"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'unternehmensgruender'),
-                )
-              "
-            />
-            <label for="unternehmensgruender" class="labels"
-              >🚀 Unternehmensgründer</label
-            >
-
-            <input
-              type="checkbox"
-              id="familienkonto"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'familienkonto'),
-                )
-              "
-            />
-            <label for="familienkonto" class="labels">👨‍👩‍👧 Familienkonto</label>
-
-            <input
-              type="checkbox"
-              id="anleger"
-              onclick="
-                console.log(
-                  (document.getElementById('find-account-button').textContent =
-                    'Als Anleger solltest du...'),
-                )
-              "
-            />
-            <label for="anleger" class="labels">📈 Anleger</label>
-
-            <input type="checkbox" id="superreich" />
-            <label for="superreich" class="labels">💎 Superreich</label>
-
-            <input type="checkbox" id="grenzgaenger" />
-            <label for="grenzgaenger" class="labels">🌐 Grenzgänger</label>
+        <div class="content-below-small-boxes">
+          <div class="button-mit-pfeil" id="banken">
+            <a href="#empfehlung_box">
+              <button class="button">
+                Entdecke die besten Banken für dein Guthaben
+              </button>
+              <img
+                class="centered-arrow"
+                src="./assets/icons/arrow_down.svg"
+                alt="Pfeil nach unten"
+                width="20"
+              />
+            </a>
           </div>
-          <!--    <button id="find-account-button" class="button">Konto finden</button>-->
 
-          <button class="button" onclick="zeigeText()">Konto finden</button>
+          <div class="box" id="empfehlung_box">
+            <h2 class="box-title">Welches Konto empfiehlst du mir?</h2>
+            <p class="box-text box-maximal-breit">
+              Das Angebot an Bankkonten ist riesig. In diesem Dschungel den
+              Überblick zu behalten, ist nicht ganz einfach und hängt von deinen
+              Bedürfnissen ab. Wähle alle Begriffe, die auf dich zutreffen und
+              wir zeigen dir die besten Optionen.
+            </p>
 
-          <strong
-            ><p class="box-text abstand-klein box-maximal-breit" id="output"></p
-          ></strong>
+            <div class="tags">
+              <input
+                type="checkbox"
+                id="student"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'student'),
+                  )
+                "
+              />
+              <label for="student" class="labels">🎓 Student</label>
 
-          <script>
-            const texte = [
-              "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
-              "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. 💸 Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet für den nächsten Urlaub. 🌴",
-              "Schon vom Jackpot-Festgeldkonto der Valiant gehört? 🤩 Du kannst jedes Jahr einen Jackpot gewinnen, wenn du dein Geld dort lässt. 🎉",
-              "Seltsame Bedürfnisse! 🤔 Wir empfehlen dir auf ein Bankkonto zu verzichten und das Geld unter der Matratze zu lagern. Das ist nicht so sicher, dafür kannst du jederzeit darauf zugreifen. 🛏️",
-            ];
+              <input
+                type="checkbox"
+                id="vielreisender"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'vielreisender'),
+                  )
+                "
+              />
+              <label for="vielreisender" class="labels">✈️ Vielreisender</label>
 
-            let index = 0;
+              <input
+                type="checkbox"
+                id="sparer"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'sparer'),
+                  )
+                "
+              />
+              <label for="sparer" class="labels">💰 Sparer</label>
 
-            function zeigeText() {
-              document.getElementById("output").innerText = texte[index];
-              index++;
+              <input
+                type="checkbox"
+                id="selbststaendiger"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'selbststaendiger'),
+                  )
+                "
+              />
+              <label for="selbststaendiger" class="labels"
+                >💼 Selbständiger</label
+              >
 
-              if (index >= texte.length) {
-                index = 0; // wieder von vorne starten (optional)
+              <input
+                type="checkbox"
+                id="unternehmensgruender"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'unternehmensgruender'),
+                  )
+                "
+              />
+              <label for="unternehmensgruender" class="labels"
+                >🚀 Unternehmensgründer</label
+              >
+
+              <input
+                type="checkbox"
+                id="familienkonto"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'familienkonto'),
+                  )
+                "
+              />
+              <label for="familienkonto" class="labels">👨‍👩‍👧 Familienkonto</label>
+
+              <input
+                type="checkbox"
+                id="anleger"
+                onclick="
+                  console.log(
+                    (document.getElementById(
+                      'find-account-button',
+                    ).textContent = 'Als Anleger solltest du...'),
+                  )
+                "
+              />
+              <label for="anleger" class="labels">📈 Anleger</label>
+
+              <input type="checkbox" id="superreich" />
+              <label for="superreich" class="labels">💎 Superreich</label>
+
+              <input type="checkbox" id="grenzgaenger" />
+              <label for="grenzgaenger" class="labels">🌐 Grenzgänger</label>
+            </div>
+            <!--    <button id="find-account-button" class="button">Konto finden</button>-->
+
+            <button class="button" onclick="zeigeText()">Konto finden</button>
+
+            <strong
+              ><p
+                class="box-text abstand-klein box-maximal-breit"
+                id="output"
+              ></p
+            ></strong>
+
+            <script>
+              const texte = [
+                "Wir empfehlen dir das Study-Fit-Sparkonto von ZKB. Es füllt sich automatisch um einen Franken pro Liegestütze. 🏋️‍♂️💰",
+                "Das Save-Konto von UBS lässt all deine Sorgen verschwinden. 💸 Es rundet jede deiner Ausgaben automatisch auf und alle deine Einnahmen ab. Die Differenz wird auf ein geheimes Backup-Konto gesendet für den nächsten Urlaub. 🌴",
+                "Schon vom Jackpot-Festgeldkonto der Valiant gehört? 🤩 Du kannst jedes Jahr einen Jackpot gewinnen, wenn du dein Geld dort lässt. 🎉",
+                "Seltsame Bedürfnisse! 🤔 Wir empfehlen dir auf ein Bankkonto zu verzichten und das Geld unter der Matratze zu lagern. Das ist nicht so sicher, dafür kannst du jederzeit darauf zugreifen. 🛏️",
+              ];
+
+              let index = 0;
+
+              function zeigeText() {
+                document.getElementById("output").innerText = texte[index];
+                index++;
+
+                if (index >= texte.length) {
+                  index = 0; // wieder von vorne starten (optional)
+                }
               }
-            }
-          </script>
+            </script>
+          </div>
+
+          <div class="button-mit-pfeil"></div>
+
+          <div class="box ranking_box abstand-klein" id="ranking_box">
+            <h2 class="box-title">Welches sind generell die besten Banken?</h2>
+            <p class="box-text box-maximal-breit">
+              Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben
+              für dich recherchiert und stellen dir hier die drei besten Banken
+              für 2026 vor.
+            </p>
+
+            <div class="swiper-button-prev"></div>
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/logos/Migros_Bank.svg"
+                    alt="Logo Migros Bank"
+                    width="120"
+                  />
+                  <p class="box-text abstand-klein">
+                    <strong>Migros Bank</strong><br /><br />
+                    Faire Konditionen<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
+                    Persönliche Beratung<br />🔵 🔵 🔵 🔵 🔵<br /><br />
+                    Etablierte Bankengruppe<br />🔵 🔵 🔵 🔵 🔵
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/logos/Neon.svg"
+                    alt="Logo Neon Bank"
+                    width="110"
+                  />
+                  <p class="box-text abstand-klein">
+                    <strong>Neon</strong><br /><br />
+                    Moderne Bank<br />🔵 🔵 🔵 🔵 🔵<br /><br />
+                    Attraktive Wechselkurse<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
+                    Einfache App-Bedienung<br />🔵 🔵 🔵 🔵 🔵
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/logos/Post_Finance.svg"
+                    alt="Logo Post Finance"
+                    width="175"
+                  />
+                  <p class="box-text abstand-klein">
+                    <strong>Post Finance</strong><br /><br />
+                    Landesweite Präsenz<br />🔵 🔵 🔵 🔵 🔵<br /><br />
+                    Hohe Stabilität<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
+                    Digitale Lösungen<br />🔵 🔵 🔵 ⚪ ⚪
+                  </p>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
 
         <div class="button-mit-pfeil"></div>
-
-        <div class="box ranking_box abstand-klein" id="ranking_box">
-          <h2 class="box-title">Welches sind generell die besten Banken?</h2>
-          <p class="box-text box-maximal-breit">
-            Ein Skandal kann das Bild einer Bank schnell verändern. Wir haben
-            für dich recherchiert und stellen dir hier die drei besten Banken
-            für 2026 vor.
-          </p>
-
-          <div class="swiper-button-prev"></div>
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img
-                  src="./assets/logos/Migros_Bank.svg"
-                  alt="Logo Migros Bank"
-                  width="120"
-                />
-                <p class="box-text abstand-klein">
-                  <strong>Migros Bank</strong><br /><br />
-                  Faire Konditionen<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
-                  Persönliche Beratung<br />🔵 🔵 🔵 🔵 🔵<br /><br />
-                  Etablierte Bankengruppe<br />🔵 🔵 🔵 🔵 🔵
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./assets/logos/Neon.svg"
-                  alt="Logo Neon Bank"
-                  width="110"
-                />
-                <p class="box-text abstand-klein">
-                  <strong>Neon</strong><br /><br />
-                  Moderne Bank<br />🔵 🔵 🔵 🔵 🔵<br /><br />
-                  Attraktive Wechselkurse<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
-                  Einfache App-Bedienung<br />🔵 🔵 🔵 🔵 🔵
-                </p>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./assets/logos/Post_Finance.svg"
-                  alt="Logo Post Finance"
-                  width="175"
-                />
-                <p class="box-text abstand-klein">
-                  <strong>Post Finance</strong><br /><br />
-                  Landesweite Präsenz<br />🔵 🔵 🔵 🔵 🔵<br /><br />
-                  Hohe Stabilität<br />🔵 🔵 🔵 🔵 ⚪<br /><br />
-                  Digitale Lösungen<br />🔵 🔵 🔵 ⚪ ⚪
-                </p>
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
-          <div class="swiper-button-next"></div>
-        </div>
       </div>
-
-      <div class="button-mit-pfeil"></div>
     </main>
     <!-- FOOTER -->
     <footer id="footer">

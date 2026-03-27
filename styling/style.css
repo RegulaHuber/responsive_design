@@ -1,3 +1,7 @@
+/* =========================================================
+   ROOT / VARIABLEN
+   ========================================================= */
+
 :root {
   --color-antrhrazit: #2b2e34;
   --color-neongelb: #f1ff27;
@@ -9,16 +13,16 @@
   --swiper-theme-color: transparent !important;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* =========================================================
+   GLOBAL / RESET
+   ========================================================= */
 
 * {
-  box-sizing: border-box; /* Verhindert, dass Padding und Border die Gesamtgröße eines Elements beeinflussen */
+  box-sizing: border-box; /* Padding + Border werden in Breite einberechnet */
 }
 
-.abstand-klein {
-  padding-top: var(--abstand-klein);
+html {
+  scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
 body {
@@ -32,6 +36,10 @@ body {
     var(--color-mint) 100%
   );
 }
+
+/* =========================================================
+   LAYOUT – HEADER
+   ========================================================= */
 
 header {
   position: fixed;
@@ -54,11 +62,7 @@ header {
   padding: 3rem 0rem;
 }
 
-.menu-icon {
-  width: 3.5vw;
-  min-width: 45px;
-  max-width: 60px;
-}
+/* Logo + Menü */
 
 .logo {
   width: 20vw;
@@ -66,7 +70,15 @@ header {
   max-width: 350px;
 }
 
-/* MAIN */
+.menu-icon {
+  width: 3.5vw;
+  min-width: 45px;
+  max-width: 60px;
+}
+
+/* =========================================================
+   LAYOUT – MAIN
+   ========================================================= */
 
 .main-content {
   max-width: 1200px;
@@ -74,25 +86,34 @@ header {
   transition: all 0.3s ease;
 }
 
-.box-maximal-breit {
-  max-width: 650px;
-}
-
 .first-card {
   padding-top: 150px;
 }
 
-.card-image-top {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
+.abstand-klein {
+  padding-top: var(--abstand-klein);
 }
+
+.box-maximal-breit {
+  max-width: 650px;
+}
+
+/* =========================================================
+   LAYOUT – CARDS / GRID
+   ========================================================= */
 
 .cards-top-or-side {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  align-items: center;
+}
+
+/* Bild oben */
+.card-image-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   align-items: center;
 }
 
@@ -106,106 +127,7 @@ header {
 .lead-image {
   order: 1;
   margin-left: 30px;
-}
 
-.tombstone {
-  transform: translateY(-50px);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1000px) {
-  .main-content {
-    margin: 0 2rem;
-  }
-
-  /* Alle Boxen untereinander anordnen */
-
-  .cards-top-or-side {
-    grid-template-columns: 1fr;
-  }
-
-  .card-image-top-or-side {
-    flex-direction: column;
-  }
-
-  .lead-image {
-    order: -1;
-  }
-
-  .bank {
-    transform: translateY(
-      max(50px, 8vw)
-    ); /* erster Wert: 60px, damit es nicht zu viel wird, zweiter Wert: 9vw, damit es auf kleineren Bildschirmen genug Abstand hat */
-  }
-
-  .gerichtshammer {
-    transform: translateY(max(60px, 9vw));
-  }
-
-  .grabstein {
-    transform: translateY(max(70px, 10vw));
-  }
-
-  .tresor {
-    transform: translateY(max(70px, 10vw));
-  }
-}
-
-.button-mit-pfeil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* Abstand zwischen Text und Pfeil */
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-
-.centered-arrow {
-  display: block;
-  margin: 10px auto; /* Zentriert das Bild horizontal */
-}
-
-/* FONTS */
-
-.lead-title {
-  font-family: "Special Elite", sans-serif;
-  font-size: 1.5rem;
-}
-
-.box-title {
-  font-family: "Special Elite", sans-serif;
-  font-size: 1.25rem;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.box-text {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5; /* Vertical spacing */
-  margin: 0;
-}
-
-.lead-text {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5; /* Vertical spacing */
-}
-
-.box {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 40px;
-  padding: 36px;
-  margin: 0 auto; /* Zentriert die Box horizontal */
-  margin-bottom: 30px;
-  scroll-margin-top: 200px;
-}
-
-.lead-image {
   max-width: 450px;
   min-width: 150px;
   width: 75svw;
@@ -217,15 +139,29 @@ header {
   width: 65svw;
 }
 
+/* =========================================================
+   KOMPONENTEN
+   ========================================================= */
+
+/* Box */
+
+.box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  padding: 36px;
+  margin: 0 auto; /* Zentriert die Box horizontal */
+  margin-bottom: 30px;
+  scroll-margin-top: 200px;
+}
+
 .darkbox {
   background-color: var(--color-antrhrazit);
   color: var(--color-white);
 }
 
-.hover_neon:hover {
-  color: var(--color-neongelb);
-  transition: color 0.3s;
-}
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 button {
   background-color: var(--color-white);
@@ -254,6 +190,57 @@ button:hover {
 
 button {
   transition: 0.3s;
+}
+
+.button-mit-pfeil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Abstand zwischen Text und Pfeil */
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.centered-arrow {
+  display: block;
+  margin: 10px auto; /* Zentriert das Bild horizontal */
+}
+
+/* FONTS */
+
+.lead-title {
+  font-family: "Special Elite", sans-serif;
+  font-size: 1.5rem;
+  line-height: 140%;
+}
+
+.box-title {
+  font-family: "Special Elite", sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 140%;
+}
+
+.box-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5; /* Vertical spacing */
+  margin: 0;
+}
+
+.lead-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5; /* Vertical spacing */
+}
+
+.hover_neon:hover {
+  color: var(--color-neongelb);
+  transition: color 0.3s;
 }
 
 /* Checkbox verstecken */
@@ -299,12 +286,10 @@ option {
   transition: 0.2s;
 }
 
-/* Hover */
 .tags label:hover {
   transform: translateY(-3px);
 }
 
-/* Aktiv (wenn ausgewählt) */
 .tags input:checked + label {
   background: var(--color-neongelb);
 }
@@ -315,7 +300,9 @@ option {
   font-size: 0.875rem;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer-box {
   background-color: var(--color-antrhrazit);
@@ -380,8 +367,10 @@ option {
   margin-bottom: 60px;
 }
 
+/* =========================================================
+   SWIPER (LIBRARY)
+   ========================================================= */
 
-/* Swiper-Styling */
 .swiper {
   height: 430px;
   position: relative;
@@ -430,4 +419,139 @@ option {
 .swiper-pagination,
 .swiper-scrollbar {
   display: none !important;
+}
+
+
+/* =========================================================
+   ANIMATIONEN
+   ========================================================= */
+
+.slide-in-image {
+  /* Startzustand: außerhalb rechts */
+  transform: translateX(100%);
+  
+  /* Animation */
+  animation: slideInFromRight 2s ease-out forwards;
+}
+
+/* Keyframes für die Bewegung */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* komplett rechts außerhalb */
+    opacity: 1; /* optional: leichtes Einblenden */
+  }
+
+  to {
+    transform: translateX(0); /* normale Position */
+    opacity: 1;
+  }
+}
+
+
+/*
+.hover-zoom {
+  transition: transform 0.3s ease; 
+}
+
+.hover-zoom:hover {
+  transform: scale(0.8) translateY(100px);
+
+}
+
+*/
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+@media (max-width: 1000px) {
+  .main-content {
+    margin: 0 2rem;
+  }
+
+
+  .lead-box {
+    transform: translateY(-70px);
+  }
+
+  /* Alle Boxen untereinander anordnen */
+
+  .cards-top-or-side {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image-top-or-side {
+    flex-direction: column;
+  }
+
+  .lead-image {
+    order: -1;
+  }
+
+  .bank {
+    transform: translateY(
+      max(50px, 8vw)
+    ); /* erster Wert: 60px, damit es nicht zu viel wird, zweiter Wert: 9vw, damit es auf kleineren Bildschirmen genug Abstand hat */
+  }
+
+  .gerichtshammer {
+    transform: translateY(max(60px, 9vw));
+  }
+
+  .grabstein {
+    transform: translateY(max(70px, 10vw));
+  }
+
+  .tresor {
+    transform: translateY(max(70px, 10vw));
+  }
+}
+
+@media (min-width: 1000px) {
+  .bank {
+    transform: translateY(max(20px, 60px));
+  }
+
+  .gerichtshammer {
+    transform: translateY(max(60px, 80px));
+  }
+
+  .grabstein {
+    transform: translateY(max(70px, 120px)) scale(0.9);
+  }
+
+  .tresor {
+    transform: scale(0.75);
+  }
+
+  .allgemeines_erste_box {
+    transform: translateY(-200px);
+  }
+
+  .allgemeines_zweite_box {
+    transform: translateY(400px);
+  }
+
+  .gerichtshammer-box {
+    transform: translateY(-100px);
+  }
+
+  .grabstein-box {
+    transform: translateY(150px);
+  }
+
+  .tresor-box {
+    transform: translateY(100px);
+  }
+
+  .content-below-small-boxes {
+    transform: translateY(50px);
+  }
+
+  .erster-button {
+    transform: translateY(-100px);
+  }
+
+
 }
