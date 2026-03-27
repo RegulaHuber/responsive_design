@@ -383,12 +383,13 @@ option {
 .swiper-button-prev {
   background-image: url("../assets/icons/arrow_left.svg");
   color: black;
-  background-size: contain;
+  background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  left: -70px;
+  left: -40px;
   transform: translate(50%, -50%);
 }
 
@@ -398,10 +399,11 @@ option {
 
 .swiper-button-next {
   background-image: url("../assets/icons/arrow_right.svg");
-  background-size: contain;
+  background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -411,7 +413,7 @@ option {
 }
 
 .swiper-slide {
-  padding: 40px 60px; /* Abstand oben und unten */
+  padding: 45px 45px; /* Abstand oben und unten */
 }
 
 /* Versteckt die Pagination und Scrollbar, da sie nicht benötigt werden */
