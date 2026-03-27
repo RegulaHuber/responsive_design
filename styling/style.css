@@ -65,14 +65,14 @@ header {
 /* Logo + Menü */
 
 .logo {
-  width: 20vw;
-  min-width: 250px;
+  width: 18vw;
+  min-width: 220px;
   max-width: 350px;
 }
 
 .menu-icon {
-  width: 3.5vw;
-  min-width: 45px;
+  width: 3.3vw;
+  min-width: 40px;
   max-width: 60px;
 }
 
